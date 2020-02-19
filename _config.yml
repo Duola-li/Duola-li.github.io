@@ -21,7 +21,7 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: my_Note, description: 日记, url: 'https://blog.csdn.net/Monster_li57'}
+    - {title: Note, description: CSDN博客, url: 'https://blog.csdn.net/Monster_li57'}
     - {title: Picture, description: 收藏的一些图片, url: 'https://img.liyue.site'}
     # - {title: bzoj-data, description: bzoj数据下载, url: 'https://bzoj.liyue.site'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
