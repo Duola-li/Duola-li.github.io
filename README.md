@@ -20,3 +20,4 @@ Edit
 2. ***_posts*** for articles, keep the name in right style
 3. ***assets/image*** for ico images
 4. ***_includes/side-panel.html*** for  pictures of background and author.
+5. ***_includes/head.html*** for ico
