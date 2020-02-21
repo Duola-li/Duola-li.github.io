@@ -21,3 +21,8 @@ Edit
 3. ***assets/image*** for ico images
 4. ***_includes/side-panel.html*** for  pictures of background and author.
 5. ***_includes/head.html*** for ico
+
+
+### Great thanks to @zhhbstudio for access speed optimization.
+
+2020-02-21 16\:19\:00
