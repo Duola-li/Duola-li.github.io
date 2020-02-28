@@ -10,7 +10,7 @@
 		if (hour>22){
 			n = second % 3 + 1;
 		}
-		document.write('<header class="panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}" style="background-image: url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg'+n+'.jpg)">');
+		document.write('<header id="myhead" class="panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}" style="background-image: url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg'+n+'.jpg)">');
 </script>
 <script language="javascript">
 var now = new Date();
@@ -18,7 +18,7 @@ var hour = now.getHours();
 window.onload=function(){
 var i = 0;
 //var head=document.getElementById("head");//获取DIV对象
-var head=document.getElementById("panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}");//获取DIV对象
+var head=document.getElementById("myhead");//获取DIV对象
         function time(){
                i++;   
                i=i % 3 + 1;         // 超过2则取余数，保证循环在0、1、2之间
