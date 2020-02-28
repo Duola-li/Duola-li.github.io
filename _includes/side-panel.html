@@ -1,4 +1,17 @@
+<!--
 <header class="panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}" style="background-image: url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg1.jpg)">
+-->
+<script language="javascript">
+		var now = new Date();
+		var hour = now.getHours();
+		var minute = now.getMinutes();
+		var second = now.getSeconds();
+		var n = minute % 3 + 1;//只有3个背景图片，以后可以多弄点
+		if (hour>22){
+			n = second % 3 + 1;
+		}
+		document.write('<header class="panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}" style="background-image: url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg'+n+'.jpg)">');
+</script>
   <div class="panel-main">
 
     <div class="panel-main__inner panel-inverted">
