@@ -6,9 +6,9 @@
 		var hour = now.getHours();
 		var minute = now.getMinutes();
 		var second = now.getSeconds();
-		var n = minute % 3 + 1;//只有3个背景图片，以后可以多弄点
+		var n = minute % 6 + 1;//只有3个背景图片，以后可以多弄点
 		if (hour>22){
-			n = second % 3 + 1;
+			n = second % 6 + 1;
 		}
 		document.write('<header id="myhead" class="panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}" style="background-image: url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg'+n+'.jpg)">');
 </script>
@@ -21,8 +21,12 @@ var i = 0;
 var head=document.getElementById("myhead");//获取DIV对象
         function time(){
                i++;   
-               i=i % 3 + 1;         // 超过2则取余数，保证循环在0、1、2之间
-               head.style.background="url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg"+i+".jpg)";
+               i=i % 6 + 1;         // 超过2则取余数，保证循环在0、1、2之间
+	       if (hour == 0){
+			head.style.background="url(https://octan3.gitee.io/images_bed/images/I/"+i+".jpg)";
+	       }else{
+               		head.style.background="url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg"+i+".jpg)";
+	       }
                
         }
 	if(hour == 0){
