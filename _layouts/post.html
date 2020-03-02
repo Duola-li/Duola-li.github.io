@@ -16,4 +16,24 @@ layout: default
 </article>
 
 {% include read-more.html %}
+
+<!--下面是自己加的gittalk-->
+<!-- ························Gitalk评论系统·························· -->
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.6.2/gitalk.css">
+  <script src="https://cdn.bootcss.com/gitalk/1.6.2/gitalk.min.js"></script> 
+  <script>
+    var gitalk  = new Gitalk ({
+        id: '{{page.title}}',   // Ensure uniqueness and length less than 50
+        clientID: '2a8298bbfebb3d2aabbb',
+        clientSecret: '299e5948c714d0d732405d982027181f0764fd68',
+        repo: 'Duola-li.github.io',
+        owner: 'Duola-li',
+        admin: 'Duola-li',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+  </script> 
+
+<!--下面这个自带的评论，用的disqus，需要去网上注册配置，挺麻烦，而且很多教程都爆炸，国内访问贼鸡儿慢，所以没用-->
 {% include comments.html %}
