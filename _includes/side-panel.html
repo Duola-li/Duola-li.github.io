@@ -23,9 +23,21 @@ var head=document.getElementById("myhead");//获取DIV对象
                i++;   
                i=i % 6 + 1;         // 超过2则取余数，保证循环在0、1、2之间
 	       if (hour == 0){
-			head.style.background="url(https://octan3.gitee.io/images_bed/images/I/"+i+".jpg)";
+			// head.style.background="url(https://octan3.gitee.io/images_bed/images/I/"+i+".jpg)";
+                        let url = "https://octan3.gitee.io/images_bed/images/I/"+i+".jpg";
+                        var img = new Image();
+                        img.onload =function () {
+                                head.style.background="url("+url+")";
+                        }
+                        img.src=url;
 	       }else{
-               		head.style.background="url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg"+i+".jpg)";
+               		// head.style.background="url(https://gitee.com/octan3/images_bed/raw/master/小书匠/bg"+i+".jpg)";
+                        let url = "https://gitee.com/octan3/images_bed/raw/master/小书匠/bg"+i+".jpg";
+                        var img = new Image();
+                        img.onload =function () {
+                                head.style.background="url("+url+")";
+                        }
+                        img.src=url;
 	       }
                
         }
